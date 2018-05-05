@@ -1,0 +1,14 @@
+{
+  "name": "adivina",
+  "version": "0.0.1",
+  "description": "Adivinador Numérico",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "Antonio Mendoza",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  }
+}

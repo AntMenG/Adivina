@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World!</title>
+        <link rel="stylesheet" href="../public/css/styles.css">
+        <script>window.$ = window.jQuery = require('../public/js/jquery.js');</script>
+        <script src="../public/js/actions.js"></script>
+    </head>
+    <body>
+        <div id="space">
+            <header>
+                ADIVINA
+                <button id="close">x</button>
+            </header>
+            <div id="noti" class="notiactive">
+
+            </div>
+            <div id="spaceCont" class="spaceContBlur">
+                <div id="mayor">
+                    <div>10</div>
+                </div>
+                <div id="numero">
+                    <input type="text" id="num" placeholder="Ingresa un número">
+                    <button id="adivina">?</button>
+                </div>
+                <div id="menor">
+                    <div>0</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        (function () {
+            const {BrowserWindow} = require('electron').remote
+
+            function init() {
+                document.getElementById("close").addEventListener("click", (e) => {
+                    var window = BrowserWindow.getFocusedWindow();
+                    window.close();
+                });
+            };
+
+            document.onreadystatechange =  () => {
+                if (document.readyState == "complete") {
+                    init();
+                }
+            };
+        })();
+    </script>
+  </html>
